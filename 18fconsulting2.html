@@ -47,7 +47,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("data/18fconsulting2.csv", function(error, links) {
+d3.csv("http://openglobe.github.io/Ment-r/data/18fconsulting2.csv", function(error, links) {
   if (error) throw error;
 
   var nodesByName = {};
