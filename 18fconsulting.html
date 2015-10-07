@@ -70,8 +70,16 @@ d3.csv("data/18fconsulting2.csv", function(error, links) {
       .attr("r", 4.5)
       .attr("cx", function(d) { return d.y; })
       .attr("cy", function(d) { return d.x; });
+  // Build text labels.
+  svg.selectAll(".node")
+      .data(nodes)
+    .enter().append("text")                   
+      .attr("dx", function(d) { return d.children ? -8 : 8; })                   
+      .attr("dy", 3)                  
+      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })         
+      .text( function(d){ return d.name;});       
 
-  function nodeByName(name) {
+    function nodeByName(name) {
     return nodesByName[name] || (nodesByName[name] = {name: name});
   }
 });
