@@ -50,7 +50,7 @@
       //*************************************************
       // GET THE CSV DATA
       //*************************************************
-      d3.csv("data/religions.csv", function(error, data) {
+      d3.csv("data/18Fmentors.csv", function(error, data) {
 
         _.each(data, function(element, index, list){
             element.pop = +element.pop;
@@ -91,7 +91,7 @@
         //*************************************************
         // CALL THE FUNCTION
         //*************************************************
-        var preppedData = genJSON(data, ['year', 'cat'])
+        var preppedData = genJSON(data, ['org', 'category'])
 
         //*************************************************
         // LOAD THE PREPPED DATA IN D3
