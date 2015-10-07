@@ -11,5 +11,5 @@ The [mentorship example](http://openglobe.github.io/Ment-r/ment-r.html) uses a J
 The [consulting example](http://openglobe.github.io/Ment-r/18fconsulting2.html) uses a CSV file to construct the nodes and links.  The graph will grow, add and expand depending on the data found in the csv file.  The CSV file follows the schema found in the data/graph.csv file.  The CSV file is [here](https://github.com/OpenGlobe/Ment-r/blob/gh-pages/18fconsulting2.csv).  This version does not yet include functional node labels.
 
 ### More Information
-More information can be found [here](http://d3js.org/) and [here] (http://bl.ocks.org/mbostock/2949981).
+More information can be found [here](http://d3js.org/) and [here] (http://bl.ocks.org/mbostock/2949981).  There's also a nice overview and tutorial on cluster dendograms [here](http://www.meccanismocomplesso.org/en/dendrogramma-d3-parte1/).
 
