@@ -1,5 +1,5 @@
 # Ment-r
-A way to visualize mentor skillsets using a D3 cluster dendrogram and a csv file.
+A way to visualize mentor skillsets using a D3 cluster dendrogram and a csv or json file.  
 
 ## Overview
 These files use a cluster dendrogram layout from the D3 library.  There are two versions of the visualization.
