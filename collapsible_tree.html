@@ -47,11 +47,20 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("flare.json", function(error, flare) {
+// d3.json("flare.json", function(error, flare) {
+d3.csv("data/18f.csv", function(data){  
+          var tree = DataStructures.Tree.createFromFlatTable(data),
+            simplifiedTree = tree.toSimpleObject(function(objectToDecorate, originalNode) {
+                objectToDecorate.size = originalNode.size;
+                if (objectToDecorate.children && objectToDecorate.children.length == 0) {
+                    delete objectToDecorate.children;
+                }
+
+                return objectToDecorate;
+            });
   root = flare;
   root.x0 = height / 2;
   root.y0 = 0;
-
   function collapse(d) {
     if (d.children) {
       d._children = d.children;
